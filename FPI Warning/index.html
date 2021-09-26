@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Phim hay | Shark Huy</title>
+	<link rel="shortcut icon" href="./img/SharkHuy_icon.ico">
+	<link rel="stylesheet" href="style.css">
+	<script src="font.js"></script>
+</head>
+
+<body>
+	<div class="card">
+		<div class="imgbox">
+			<img src="./img/tokuda.png">
+		</div>
+		<div class="descr">
+			<h2>Shark Huy</h2>
+			<ul>
+				<li>2021</li>
+				<li>124min</li>
+				<li>Adult Video</li>
+			</ul>
+			<ul class="rating">
+				<li><i class="fas fa-star"></i></li>
+				<li><i class="fas fa-star"></i></li>
+				<li><i class="fas fa-star"></i></li>
+				<li><i class="fas fa-star"></i></li>
+				<li><i class="fas fa-star"></i></li>
+			</ul>
+			<div class="textContent">
+				<p>Một bộ phim kể về tình cha con cảm động của cụ ông Tokuda Shigeo đang phải chống chọi với căn bệnh
+					cảm cúm.</p>
+				<a href="#">Read More</a>
+			</div>
+			<button><i class="fa fa-play"></i> XEM PHIM</button>
+		</div>
+	</div>
+
+	<div class="trailer">
+		<video src="./video/tokuda.mp4" controls="true"></video>
+
+		<span class="close">&times;</span>
+	</div>
+
+	<script>
+		const button = document.querySelector("button");
+		const close = document.querySelector(".close");
+		const trailer = document.querySelector(".trailer");
+		const video = document.querySelector("video");
+
+		button.addEventListener('click', () => {
+			trailer.style.visibility = "visible";
+			trailer.style.opacity = 1;
+		});
+
+		close.addEventListener('click', () => {
+			trailer.style.visibility = "hidden";
+			trailer.style.opacity = 0;
+
+			video.pause();
+			video.currentTime = 0;
+		});
+	</script>
+</body>
+
+</html>

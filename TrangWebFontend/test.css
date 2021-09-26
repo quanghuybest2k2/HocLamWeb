@@ -1,0 +1,22 @@
+body{
+    width: 1000px;
+    font-family: Cambria;
+    font-size: larger;
+    padding:0px;
+    margin: 20px;
+}
+header {
+    background-color: aqua;
+}
+header ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+header ul li a {
+    text-decoration: none;
+    color: blueviolet;
+}
+header ul li a:hover{
+    text-decoration: underline;
+    color: burlywood;
+}
