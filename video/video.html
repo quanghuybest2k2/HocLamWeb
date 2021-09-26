@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 16%;
+            padding: 0;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+        <br><br>
+        <!-- <video controls autoplay=1 muted=1> -->
+        <video id="video1" width="420" controls>
+            <!-- controls: bảng điều khiển, muted=1: Tắt tiếng, autoplay=1: Luôn chạy khi khưởi động -->
+            <source src="./tokuda.mp4" type="video/mp4">
+        </video>
+        <audio controls autoplay>
+            <!-- Tương tự video -->
+            <source src="./You Dont Know Me.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <script>
+        var myVideo = document.getElementById("video1");
+
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+
+        function makeBig() {
+            myVideo.width = 560;
+        }
+
+        function makeSmall() {
+            myVideo.width = 320;
+        }
+
+        function makeNormal() {
+            myVideo.width = 420;
+        }
+    </script>
+</body>
+
+</html>
