@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Language</title>
+</head>
+
+<body>
+    <h1 style="color: green">
+        Change Language
+    </h1>
+
+    <p>
+        Tiếng Anh - Tiếng Việt - Tiếng Nhật
+    </p>
+
+    <!-- Define the buttons that will
+change the language of the page
+and reload it -->
+    <button onclick="changeLanguage('eng')">English</button>
+    <button onclick="changeLanguage('vi')">Vietnamese </button>
+    <button onclick="changeLanguage('jp')">Japanese</button>
+
+    <!-- Define the content of the page
+that would be changed -->
+    <p id="siteContent">
+        Each person must have the ideal partner for themselves. For me, my ideal partner is a good heart, honesty, and
+        respect parents, hardworking, and educated. Moreover, she is also a pretty and attractive woman.
+
+        Firstly, I love my ideal partner very much because she is enough clever to keep my heart cheerful and always
+        helps me when I need her, especially in my studies.
+
+        Besides that, my girlfriend is good heart and responsible when she always reminds me that education is very
+        important because that is what determines our future.
+    </p>
+
+
+    <script>
+        // Create a function to change
+        // the hash value of the page
+        function changeLanguage(lang) {
+            location.hash = lang;
+            location.reload();
+        }
+
+        // Define the language reload anchors
+        var language = {
+            eng: {
+                welcome: "Each person must have the ideal partner for themselves. For me, my ideal partner is a good heart, honesty, and respect parents, hardworking, and educated. Moreover, she is also a pretty and attractive woman.Firstly, I love my ideal partner very much because she is enough clever to keep my heart cheerful and always helps me when I need her, especially in my studies.Besides that, my girlfriend is good heart and responsible when she always reminds me that education is very important because that is what determines our future."
+            },
+            vi: {
+                welcome: "Mỗi người phải có cho mình người bạn đời lý tưởng. Đối với tôi, người bạn đời lý tưởng của tôi là một người tốt, trung thực và kính trọng cha mẹ, chăm chỉ và có học thức. Hơn nữa, cô ấy còn là một phụ nữ xinh đẹp và hấp dẫn.Thứ nhất, tôi rất yêu người bạn đời lý tưởng của mình vì cô ấy đủ khéo léo để giữ cho trái tim tôi luôn vui vẻ và luôn giúp đỡ tôi khi tôi cần cô ấy, đặc biệt là trong học tập. Bên cạnh đó, bạn gái tôi là người tốt và có trách nhiệm khi luôn nhắc nhở tôi rằng học hành rất quan trọng vì đó là điều quyết định tương lai của chúng tôi."
+            },
+            jp: {
+                welcome: "一人一人が自分にとって理想的なパートナーを持っている必要があります。 私にとって、私の理想的なパートナーは、良い心、誠実さ、そして両親を尊重し、勤勉で、教育を受けていることです。 また、可愛くて魅力的な女性でもあります。第一に、私は理想的なパートナーをとても愛しています。なぜなら、彼女は私の心を元気に保つのに十分賢く、特に私の研究において、彼女が必要なときにいつも私を助けてくれるからです。それに加えて、私のガールフレンドは、教育が私たちの未来を決定するものであるため、教育が非常に重要であることを常に私に思い出させるとき、良い心と責任があります。"
+            }
+        };
+
+        // Check if a hash value exists in the URL
+        if (window.location.hash) {
+
+            // Set the content of the webpage
+            // depending on the hash value
+            if (window.location.hash == "#vi") {
+                siteContent.textContent =
+                    language.vi.welcome;
+            }
+            else if (window.location.hash == "#jp") {
+                siteContent.textContent =
+                    language.jp.welcome;
+            }
+        }
+    </script>
+</body>
+
+</html>
