@@ -1,2 +1,2 @@
 # HTML CSS & JAVASCRIPT BASIC
-# Lấy thì xin để lại nguồn :))
+# Copy code thì xin để lại nguồn :))
