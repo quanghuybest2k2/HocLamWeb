@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    background-color:#ce5454;
+    width:1000px;
+    margin: 0 auto;
+}
+.container {
+    background-color: rgb(204, 58, 58);
+}
+header {
+    background-color: #e9d8f4;
+    color: #942307;
+    padding: 15px;
+    background-image: url(./img/banner.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+header > h1 {
+    font-family: 'Rampart One', cursive;
+
+  }
+
+nav {
+    overflow: hidden;
+    background-color: rgb(37, 33, 33);
+    width: 100%;
+}
+nav ul {
+    list-style-type: none;
+}
+nav li {
+    display: inline-block;
+    padding:0 20px;
+    font-size: 20px;
+}
+nav li a{
+    color: #fc2004;
+    text-decoration:none;
+}
+nav li a:hover {
+    color: rgb(255, 255, 255);
+}
+/* ảnh */
+img{
+    width:50px;
+    height: 60px;
+    border-radius:5px; 
+}
+.fontNews a{
+  text-decoration: none;
+}
+.fontNews a:visited {
+  color: black;
+}
+.fontNews a:visited:hover {
+  color: brown;
+}
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+.main p {
+    font-family: 'Italianno', cursive;
+
+}
+/* dãn chữ cho đều */
+h2,h5,p{
+    text-align: justify;
+}
+/* Cột trái */
+.left { 
+    float: left;
+    width: 75%;
+  }
+  
+  /* Cột phải */
+  .right {
+    float: left;
+    width: 25%;
+    background-color: #da3434;
+    padding-left: 20px;
+  }
+  /* hình trên */
+  .imgLeft1 {
+    background-color: #dd4011;
+    width: 100%;
+    height:300px;
+    padding: 20px;
+    background-image: url(./img/oneDirection.jpg);
+  }
+  /* hình dưới */
+  .imgLeft2{
+    background-color: #dd4011;
+    width: 100%;
+    height:300px;
+    padding: 20px;
+    background-image: url(./img/hinh2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+ 
+  .imgRight img{
+    padding: 0px;
+    background-color: #dd4011;
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+  }
+
+  /* Thêm định dạng */
+  .card {
+    background-color:rgb(219, 219, 219);
+    padding: 20px;
+    margin-top: 20px;
+  }
+  .card p a{
+    text-decoration: none;
+    color: black;
+  } 
+  .card p a:hover {
+    color: brown;
+  }
+  .card .fontNews {
+    font-size:13px;
+  }
+  /* Clear float khác sau các cột */
+  .main:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 10px;
+    text-align: center;
+    background: rgb(39, 37, 37);
+    margin-top: 5px;
+    color: white;
+  }
+  footer p {
+    text-align: center;
+  }
+  footer p a:visited{
+    color: #fc2004;
+  }
+  footer p a:visited:hover{
+    color: brown;
+  }
+  footer p a {
+    text-decoration: none;
+  }
+  
+  /* không để chồng lên nhau máy tính*/
+  @media screen and (max-width: 700px) {
+    .left { 
+      width: 75%;
+      padding: 0;
+    }
+    .right{
+      width: 25%;
+      padding: 0;
+    }
+  }
+  
+  /* không để chồng lên nhau điện thoại*/
+  @media screen and (max-width: 300px) {
+    header a {
+      float: none;
+      width: 100%;
+    }
+  }
